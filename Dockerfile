@@ -6,7 +6,7 @@
 #
 
 FROM ubuntu:17.10
-MAINTAINER Jan Grewe <jan@faked.org>
+MAINTAINER Renato Almeida <renato.almeida@getyouclap.com>
 
 ENV VERSION_SDK_TOOLS "4333796"
 
