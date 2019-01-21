@@ -1,12 +1,12 @@
 #
-# GitLab CI: Android v0.2
+# GitLab CI: Android v0.3
 #
 # https://hub.docker.com/r/jangrewe/gitlab-ci-android/
 # https://git.faked.org/jan/gitlab-ci-android
 #
 
 FROM frolvlad/alpine-oraclejdk8:full
-MAINTAINER Renato Almeida <renato.almeida@getyouclap.com>
+MAINTAINER Renato Almeida <renato.almeida@youclap.tech>
 
 ENV VERSION_SDK_TOOLS "4333796"
 
@@ -23,8 +23,8 @@ RUN curl -s https://dl.google.com/android/repository/sdk-tools-linux-${VERSION_S
 
 
 RUN mkdir -p $ANDROID_HOME/licenses/ \
-  && echo "8933bad161af4178b1185d1a37fbf41ea5269c55\nd56f5187479451eabf01fb78af6dfcb131a6481e" > $ANDROID_HOME/licenses/android-sdk-license \
-  && echo "84831b9409646a918e30573bab4c9c91346d8abd\n504667f4c0de7af1a06de9f4b1727b84351f2910" > $ANDROID_HOME/licenses/android-sdk-preview-license
+  && echo -e "8933bad161af4178b1185d1a37fbf41ea5269c55\nd56f5187479451eabf01fb78af6dfcb131a6481e\n24333f8a63b6825ea9c5514f83c2829b004d1fee" > $ANDROID_HOME/licenses/android-sdk-license \
+  && echo -e "84831b9409646a918e30573bab4c9c91346d8abd\n504667f4c0de7af1a06de9f4b1727b84351f2910" > $ANDROID_HOME/licenses/android-sdk-preview-license
 
 ADD packages.txt /sdk
 RUN mkdir -p /root/.android && \
