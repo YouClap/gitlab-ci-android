@@ -1,12 +1,5 @@
-#
-# GitLab CI: Android v0.3
-#
-# https://hub.docker.com/r/jangrewe/gitlab-ci-android/
-# https://git.faked.org/jan/gitlab-ci-android
-#
+FROM frolvlad/alpine-java:jdk8-slim
 
-FROM frolvlad/alpine-oraclejdk8:full
-MAINTAINER Renato Almeida <renato.almeida@youclap.tech>
 
 ENV VERSION_SDK_TOOLS "4333796"
 
